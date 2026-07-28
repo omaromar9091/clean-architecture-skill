@@ -6,6 +6,26 @@ Drop it into your skills directory and Claude will automatically reach for it wh
 
 ---
 
+## Quick install (one command)
+
+Run this from the root of any project. It downloads the skill and places it at `.claude/skills/clean-architecture/`, where Claude Code and other Claude-based agents pick up skills automatically — no manual copying needed.
+
+**macOS / Linux:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/omaromar9091/clean-architecture-skill/main/install.sh | bash
+```
+
+**Windows (PowerShell):**
+```powershell
+iwr -useb https://raw.githubusercontent.com/omaromar9091/clean-architecture-skill/main/install.ps1 | iex
+```
+
+Prefer to inspect a script before running it? Open [`install.sh`](install.sh) or [`install.ps1`](install.ps1) first — both just download `SKILL.md` and the `references/` files into your project, nothing else.
+
+For manual installation (copying the folder yourself, or using this with a non-Claude tool), see [Installation](#installation) below.
+
+---
+
 ## Why this exists
 
 Most "Clean Architecture" prompts and cheat sheets have the same problem: they describe the *theory* well but fall apart in practice. They tell an AI agent to enforce four concentric layers on every single request — including a one-line bug fix — which produces exactly the kind of bureaucratic over-engineering Clean Architecture was invented to prevent. They also tend to skip the parts that actually come up in real projects: how do errors cross layer boundaries? Where does a database transaction belong? What do you do when the existing codebase is a mess and someone just wants one clean feature added to it?
